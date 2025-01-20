@@ -53,7 +53,7 @@ exports.default = async function (options) {
   try {
     await sign({
       path: options.path,
-      name: 'jan-win-x64',
+      name: 'newos-win-x64',
       certUrl,
       clientId,
       tenantId,

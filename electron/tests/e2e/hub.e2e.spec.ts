@@ -6,8 +6,8 @@ test.beforeAll(async () => {
     asar: true,
     executable: expect.anything(),
     main: expect.anything(),
-    name: 'jan',
-    packageJson: expect.objectContaining({ name: 'jan' }),
+    name: 'new-os',
+    packageJson: expect.objectContaining({ name: 'new-os' }),
     platform: process.platform,
     resourcesDir: expect.anything(),
   })

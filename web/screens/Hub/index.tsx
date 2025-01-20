@@ -71,13 +71,7 @@ const HubScreen = () => {
     <CenterPanelContainer>
       <ScrollArea data-testid="hub-container-test-id" className="h-full w-full">
         <div className="relative h-40 p-4 sm:h-auto">
-          <Image
-            src="./images/hub-banner.png"
-            alt="Hub Banner"
-            width={800}
-            height={800}
-            className="h-full w-full rounded-lg object-cover"
-          />
+          <div className="flex h-64 w-64 w-full rounded-lg items-center justify-center rounded-xl bg-gradient-to-r from-gray-200 to-gray-400 object-cover"></div>
           <div className="absolute left-1/2 top-1/2 mx-auto w-4/5 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[hsla(var(--app-bg))] p-4 sm:w-1/2">
             <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
               <div className="w-full">

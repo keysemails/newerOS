@@ -6,7 +6,7 @@ export async function setup() {
   /**
    * Setup Jan Data Directory
    */
-  const appDir = process.env.JAN_DATA_DIRECTORY ?? join(__dirname, '..', 'jan')
+  const appDir = process.env.JAN_DATA_DIRECTORY ?? join(__dirname, '..', 'newos')
 
   console.debug(`Create app data directory at ${appDir}...`)
   if (!existsSync(appDir)) mkdirSync(appDir)

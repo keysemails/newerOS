@@ -29,10 +29,16 @@ import { trayManager } from './managers/tray'
 import { logSystemInfo } from './utils/system'
 import { registerGlobalShortcuts } from './utils/shortcut'
 
+/**
+ * Paths
+ **/
+
 const preloadPath = join(__dirname, 'preload.js')
 const rendererPath = join(__dirname, '..', 'renderer')
+const onlineModeUrl = 'https://os.newcoin.org'
+
+const mainPath = join('file://', join(rendererPath, 'index.html'))
 const quickAskPath = join(rendererPath, 'search.html')
-const mainPath = join(rendererPath, 'index.html')
 
 const mainUrl = 'http://localhost:3000'
 const quickAskUrl = `${mainUrl}/search`
@@ -41,12 +47,12 @@ const gotTheLock = app.requestSingleInstanceLock()
 
 if (process.defaultApp) {
   if (process.argv.length >= 2) {
-    app.setAsDefaultProtocolClient('jan', process.execPath, [
+    app.setAsDefaultProtocolClient('new-os', process.execPath, [
       resolve(process.argv[1]),
     ])
   }
 } else {
-  app.setAsDefaultProtocolClient('jan')
+  app.setAsDefaultProtocolClient('new-os')
 }
 
 const createMainWindow = () => {

@@ -1,15 +1,18 @@
 {
-  "name": "jan",
+  "name": "new-os",
   "version": "0.1.4",
   "main": "./build/main.js",
-  "author": "Jan <service@jan.ai>",
+  "author": {
+    "name": "Sofiane Delloue",
+    "email": "sofiane@new.foundation"
+  },
   "license": "MIT",
-  "productName": "Jan",
-  "homepage": "https://github.com/janhq/jan/tree/main/electron",
+  "productName": "NewOS",
+  "homepage": "https://github.com/qmweb/newOS/tree/dev/electron",
   "description": "Use offline LLMs with your own data. Run open source models like Llama2 or Falcon on your internal computers/servers.",
   "build": {
-    "appId": "jan.ai.app",
-    "productName": "Jan",
+    "appId": "new-os.ai.app",
+    "productName": "NewOS",
     "files": [
       "renderer/**/*",
       "build/**/*.{js,map}",
@@ -32,8 +35,8 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "janhq",
-        "repo": "jan"
+        "owner": "newcoin-os",
+        "repo": "new-os"
       }
     ],
     "extends": null,
@@ -42,8 +45,10 @@
       "entitlements": "./entitlements.mac.plist",
       "entitlementsInherit": "./entitlements.mac.plist",
       "notarize": {
-        "teamId": "F8AH6NHVY5"
+        "teamId": "5WMKL4KQY7"
       },
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
       "icon": "icons/icon.png"
     },
     "linux": {
@@ -68,13 +73,13 @@
     },
     "protocols": [
       {
-        "name": "Jan",
+        "name": "NewOS",
         "schemes": [
-          "jan"
+          "new-os"
         ]
       }
     ],
-    "artifactName": "jan-${os}-${arch}-${version}.${ext}"
+    "artifactName": "newos-${os}-${arch}-${version}.${ext}"
   },
   "scripts": {
     "lint": "eslint . --ext \".js,.jsx,.ts,.tsx\"",

@@ -51,7 +51,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fontFamily: {
-          sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+          sans: ['Newfoundation Whyte', ...defaultTheme.fontFamily.sans],
         },
       },
     },

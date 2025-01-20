@@ -5,7 +5,7 @@ XPStyle on
 !macro customUnInstall
   ${ifNot} ${isUpdated}
     ; Define the process name of your Electron app
-    StrCpy $0 "Jan.exe"
+    StrCpy $0 "NewOS.exe"
 
     ; Check if the application is running
     nsExec::ExecToStack 'tasklist /FI "IMAGENAME eq $0" /NH'
@@ -14,7 +14,7 @@ XPStyle on
     StrCmp $1 "" notRunning
 
     ; If the app is running, notify the user and attempt to close it
-    MessageBox MB_OK "Jan is being uninstalled, force close app." IDOK forceClose
+    MessageBox MB_OK "NewOS is being uninstalled, force close app." IDOK forceClose
 
     forceClose:
       ; Attempt to kill the running application
@@ -30,15 +30,15 @@ XPStyle on
 
     continueUninstall:
       ; Proceed with uninstallation
-      DeleteRegKey HKLM "Software\Jan"
+      DeleteRegKey HKLM "Software\NewOS"
       RMDir /r "$INSTDIR"
       Delete "$INSTDIR\*.*"
 
       ; Clean up shortcuts and app data
-      Delete "$DESKTOP\Jan.lnk"
-      Delete "$STARTMENU\Programs\Jan.lnk"
-      RMDir /r "$APPDATA\Jan"
-      RMDir /r "$LOCALAPPDATA\jan-updater"
+      Delete "$DESKTOP\NewOS.lnk"
+      Delete "$STARTMENU\Programs\NewOS.lnk"
+      RMDir /r "$APPDATA\NewOS"
+      RMDir /r "$LOCALAPPDATA\newos-updater"
 
       ; Close the uninstaller
       Quit
