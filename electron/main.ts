@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Menu } from 'electron'
 
 import { join, resolve } from 'path'
 /**
@@ -109,6 +109,23 @@ app
         windowManager.showMainWindow()
       }
     })
+  })  
+  .then(() => {
+    // Modify menu to switch between private and online mode
+    const modePath = app.isPackaged ? mainPath : mainUrl
+    const menu = Menu.getApplicationMenu()
+
+    if (menu) {
+      const submenu = menu.items[0]?.submenu
+      if (submenu) {
+        submenu.items[0].click = () => {
+          windowManager.mainWindow?.loadURL(modePath)
+        }
+        submenu.items[1].click = () => {
+          windowManager.mainWindow?.loadURL(onlineModeUrl)
+        }
+      }
+    }
   })
 
 app.on('open-url', (_event, url) => {

@@ -312,4 +312,10 @@ export function handleAppIPCs() {
     const { stopServer } = require('@janhq/server')
     return stopServer()
   })
+
+    // Load the URL in the main window
+    ipcMain.handle(
+      NativeRoute.loadUrl, 
+      async (_event, url: string): Promise<any> => windowManager.mainWindow?.loadURL(url)
+    )
 }

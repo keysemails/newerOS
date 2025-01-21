@@ -8,12 +8,11 @@ export const mainWindowConfig: Electron.BrowserWindowConstructorOptions = {
   show: true,
   // we want to go frameless on windows and linux
   transparent: process.platform === 'darwin',
-  frame: process.platform === 'darwin',
-  titleBarStyle: 'hiddenInset',
+  frame: true,
   vibrancy: 'fullscreen-ui',
   visualEffectState: 'active',
-  backgroundMaterial: 'acrylic',
-  autoHideMenuBar: true,
+  // backgroundMaterial: 'acrylic',
+  fullscreenable: true,
   trafficLightPosition: {
     x: 16,
     y: 10,

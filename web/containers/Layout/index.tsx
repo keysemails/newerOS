@@ -38,9 +38,10 @@ import {
   productAnalyticPromptAtom,
   reduceTransparentAtom,
 } from '@/helpers/atoms/Setting.atom'
+import EntryViewContainer from '../EntryViewContainer'
 
 const BaseLayout = () => {
-  const setMainViewState = useSetAtom(mainViewStateAtom)
+  const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
   const importModelStage = useAtomValue(getImportModelStageAtom)
   const reduceTransparent = useAtomValue(reduceTransparentAtom)
   const [productAnalytic, setProductAnalytic] = useAtom(productAnalyticAtom)
@@ -127,6 +128,13 @@ const BaseLayout = () => {
     }
   }
 
+  if (
+    mainViewState === MainViewState.GetStarted ||
+    mainViewState === MainViewState.ModeChoice
+  ) {
+    return <EntryViewContainer />
+  }
+  
   return (
     <div
       className={twMerge(
@@ -136,8 +144,8 @@ const BaseLayout = () => {
           : 'bg-[hsla(var(--app-transparent))]'
       )}
     >
-      <TopPanel />
-      <div className="relative top-9 flex h-[calc(100vh-(36px+36px))] w-screen">
+      {/* <TopPanel /> */}
+      <div className="relative flex h-[calc(100vh-36px)] w-screen">
         <RibbonPanel />
         <MainViewContainer />
         <LoadingModal />

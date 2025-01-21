@@ -104,6 +104,7 @@
     "build:darwin": "tsc -p . && electron-builder -p never -m --universal",
     "build:win32": "tsc -p . && electron-builder -p never -w",
     "build:linux": "tsc -p . && electron-builder -p never -l deb -l AppImage",
+    "build:all": "yarn build:darwin && yarn build:win32 && yarn build:linux",
     "build:publish": "yarn copy:assets && run-script-os",
     "build:publish:darwin": "tsc -p . && electron-builder -p always -m --universal",
     "build:publish:win32": "tsc -p . && electron-builder -p always -w",

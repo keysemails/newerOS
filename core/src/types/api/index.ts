@@ -31,6 +31,7 @@ export enum NativeRoute {
 
   startServer = 'startServer',
   stopServer = 'stopServer',
+  loadUrl = 'loadUrl',
 }
 
 /**

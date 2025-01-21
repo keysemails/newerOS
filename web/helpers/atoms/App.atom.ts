@@ -4,7 +4,7 @@ import { atomWithStorage } from 'jotai/utils'
 
 import { MainViewState } from '@/constants/screens'
 
-export const mainViewStateAtom = atom<MainViewState>(MainViewState.Thread)
+export const mainViewStateAtom = atom<MainViewState>(MainViewState.GetStarted)
 
 export const defaultJanDataFolderAtom = atom<string>('')
 

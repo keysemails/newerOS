@@ -10,6 +10,12 @@ const template: (Electron.MenuItemConstructorOptions | Electron.MenuItem)[] = [
     label: app.name,
     submenu: [
       {
+        label: `Switch to Private mode`,
+      },
+      {
+        label: `Switch to Online mode`,
+      },
+      {
         label: `About ${app.name}`,
         click: () =>
           dialog.showMessageBox({

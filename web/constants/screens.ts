@@ -3,4 +3,6 @@ export enum MainViewState {
   Settings,
   Thread,
   LocalServer,
+  GetStarted,
+  ModeChoice,
 }
