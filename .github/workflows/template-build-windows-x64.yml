@@ -37,14 +37,12 @@ jobs:
 
       - name: Update app version base on tag
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && inputs.public_provider == 'github'
-        shell: bash
+        shell: bash 
         run: |
           jq --arg version "${VERSION_TAG#v}" '.version = $version' electron/package.json > /tmp/package.json
           mv /tmp/package.json electron/package.json
           jq --arg version "${VERSION_TAG#v}" '.version = $version' web/package.json > /tmp/package.json
           mv /tmp/package.json web/package.json
-          jq '.build.win.sign = "./sign.js"' electron/package.json > /tmp/package.json
-          mv /tmp/package.json electron/package.json
         env:
           VERSION_TAG: ${{ inputs.new_version }}
 
