@@ -7,10 +7,10 @@ export const mainWindowConfig: Electron.BrowserWindowConstructorOptions = {
   minHeight: DEFAULT_MIN_HEIGHT,
   show: true,
   // we want to go frameless on windows and linux
-  transparent: process.platform === 'darwin',
+  // transparent: process.platform === 'darwin',
   frame: true,
   vibrancy: 'fullscreen-ui',
-  visualEffectState: 'active',
+  // visualEffectState: 'active',
   // backgroundMaterial: 'acrylic',
   fullscreenable: true,
   trafficLightPosition: {
