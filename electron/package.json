@@ -7,12 +7,12 @@
     "email": "sofiane@new.foundation"
   },
   "license": "MIT",
-  "productName": "NewOS",
+  "productName": "newOS",
   "homepage": "https://github.com/qmweb/newOS/tree/dev/electron",
   "description": "Use offline LLMs with your own data. Run open source models like Llama2 or Falcon on your internal computers/servers.",
   "build": {
     "appId": "com.electron.newos",
-    "productName": "NewOS",
+    "productName": "newOS",
     "files": [
       "renderer/**/*",
       "build/**/*.{js,map}",
@@ -73,7 +73,7 @@
     },
     "protocols": [
       {
-        "name": "NewOS",
+        "name": "newOS",
         "schemes": [
           "new-os"
         ]

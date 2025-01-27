@@ -107,7 +107,7 @@ export default class JanAssistantExtension extends AssistantExtension {
 
   async deleteAssistant(assistant: Assistant): Promise<void> {
     if (assistant.id === 'new-os') {
-      return Promise.reject('Cannot delete NewOS Assistant')
+      return Promise.reject('Cannot delete newOS Assistant')
     }
 
     // remove the directory
@@ -128,7 +128,7 @@ export default class JanAssistantExtension extends AssistantExtension {
     id: 'new-os',
     object: 'assistant',
     created_at: Date.now() / 1000,
-    name: 'NewOS',
+    name: 'newOS',
     description: 'A default assistant that can use all downloaded models',
     model: '*',
     instructions: '',

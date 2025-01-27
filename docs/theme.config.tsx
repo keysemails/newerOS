@@ -16,7 +16,7 @@ const defaultImage = 'https://jan.ai/assets/images/general/og-image.png'
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  'name': 'NewOS',
+  'name': 'newOS',
   'url': `${defaultUrl}`,
   'logo': `${defaultImage}`,
 }
@@ -26,7 +26,7 @@ const config: DocsThemeConfig = {
     <span className="flex gap-x-8 items-center">
       <div className="flex">
         <LogoMark />
-        <span className="ml-2 text-lg font-semibold">NewOS</span>
+        <span className="ml-2 text-lg font-semibold">newOS</span>
       </div>
     </span>
   ),

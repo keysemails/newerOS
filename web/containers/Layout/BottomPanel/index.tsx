@@ -41,7 +41,7 @@ const BottomPanel = () => {
       <div className="flex items-center gap-x-1">
         <SystemMonitor />
         <span className="font-medium text-[hsla(var(--text-secondary))]">
-          NewOS v{VERSION ?? ''}
+          newOS v{VERSION ?? ''}
         </span>
       </div>
     </div>

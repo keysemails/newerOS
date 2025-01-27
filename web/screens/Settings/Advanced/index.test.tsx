@@ -65,7 +65,7 @@ describe('Advanced', () => {
       expect(screen.getByText('Experimental Mode')).toBeInTheDocument()
       expect(screen.getByText('HTTPS Proxy')).toBeInTheDocument()
       expect(screen.getByText('Ignore SSL certificates')).toBeInTheDocument()
-      expect(screen.getByText('NewOS Data Folder')).toBeInTheDocument()
+      expect(screen.getByText('newOS Data Folder')).toBeInTheDocument()
       expect(screen.getByText('Reset to Factory Settings')).toBeInTheDocument()
     })
   })
@@ -128,7 +128,7 @@ describe('Advanced', () => {
   it('renders DataFolder component', async () => {
     render(<Advanced />)
     await waitFor(() => {
-      expect(screen.getByText('NewOS Data Folder')).toBeInTheDocument()
+      expect(screen.getByText('newOS Data Folder')).toBeInTheDocument()
       expect(screen.getByTestId(/jan-data-folder-input/i)).toBeInTheDocument()
     })
   })

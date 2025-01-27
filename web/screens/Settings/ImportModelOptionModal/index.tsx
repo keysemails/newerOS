@@ -18,13 +18,13 @@ const importOptions: ModelImportOption[] = [
     type: 'symlink',
     title: 'Keep Original Files & Symlink',
     description:
-      'You maintain your model files outside of NewOS. Keeping your files where they are, and NewOS will create a smart link to them.',
+      'You maintain your model files outside of newOS. Keeping your files where they are, and newOS will create a smart link to them.',
   },
   {
     type: 'copy',
     title: 'Move model binary file',
     description:
-      'NewOS will move your model binary file from your current folder into NewOS Data Folder.',
+      'newOS will move your model binary file from your current folder into newOS Data Folder.',
   },
 ]
 
@@ -56,7 +56,7 @@ const ImportModelOptionModal = () => {
           onContinueClick()
         }
       }}
-      title="How would you like NewOS to handle your models?"
+      title="How would you like newOS to handle your models?"
       content={
         <div className="mt-4">
           {importOptions.map((option) => (
