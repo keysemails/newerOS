@@ -33,7 +33,7 @@ const EntryScreen = () => {
       <div className="absolute bottom-0 w-full p-6">
         <div className="flex w-full items-center justify-between rounded-xl px-10 py-8" style={{ backgroundColor: "#ededed" }}>
           <div className="flex items-center gap-x-6">
-            <div className="dark:invert">
+            <div>
               <LogoMark width={58} height={58} />
             </div>
             <div>
