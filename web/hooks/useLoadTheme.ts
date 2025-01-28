@@ -64,7 +64,7 @@ export const useLoadTheme = () => {
     })
 
     if (janDataFolderPath.length > 0) {
-      if (!selectedIdTheme.length) return setSelectedIdTheme('joi-light')
+      if (!selectedIdTheme.length) return setSelectedIdTheme('newos-light')
       const filePath = await joinPath([
         `${folderPath}/${selectedIdTheme}`,
         `theme.json`,

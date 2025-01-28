@@ -1,6 +1,6 @@
 {
-  "id": "joi-light",
-  "displayName": "Joi Light",
+  "id": "newos-light",
+  "displayName": "newOS Light",
   "reduceTransparent": true,
   "nativeTheme": "light",
   "variables": {
@@ -8,14 +8,14 @@
       "bg": "0, 0%, 100%, 1",
       "transparent": "0, 0%, 100%, 0.8",
       "border": "0, 0%, 0%, 0.1",
-      "link": "221, 83%, 53%, 1",
+      "link": "0, 0%, 0%, 1",
       "code-block": "0, 0%, 17%, 1"
     },
 
     "primary": {
       "bg": {
-        "__default": "221, 83%, 53%, 1",
-        "soft": "221, 83%, 53%, 0.1"
+        "__default": "0, 0%, 0%, 1",
+        "soft": "0, 0%, 0%, 0.1"
       },
       "fg": "0, 0%, 100%, 1"
     },
@@ -120,13 +120,13 @@
     },
 
     "loader": {
-      "bg": "221, 83%, 53%, 0.1",
-      "fg": "221, 83%, 53%, 1",
-      "active-bg": "221, 83%, 53%, 0.2"
+      "bg": "0, 0%, 0%, 0.1",
+      "fg": "0, 0%, 0%, 1",
+      "active-bg": "0, 0%, 0%, 0.2"
     },
 
     "toaster": {
-      "bg": "240, 6%, 10%, 1",
+      "bg": "0, 0%, 0%, 1",
       "text-title": "0, 0%, 100%, 1",
       "close-icon": "0, 0%, 100%, 0.8",
       "text-desc": "0, 0%, 100%, 0.8"

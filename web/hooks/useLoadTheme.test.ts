@@ -29,10 +29,10 @@ describe('useLoadTheme', () => {
 
   const mockJanDataFolderPath = '/mock/path'
   const mockThemesPath = '/mock/path/themes'
-  const mockSelectedThemeId = 'joi-light'
+  const mockSelectedThemeId = 'newos-light'
   const mockThemeData = {
-    id: 'joi-light',
-    displayName: 'Joi Light',
+    id: 'newos-light',
+    displayName: 'newOS Light',
     nativeTheme: 'light',
     variables: {
       '--primary-color': '#007bff',
@@ -62,7 +62,7 @@ describe('useLoadTheme', () => {
     })
 
     // Mock fs and joinPath
-    ;(fs.readdirSync as jest.Mock).mockResolvedValue(['joi-light', 'joi-dark'])
+    ;(fs.readdirSync as jest.Mock).mockResolvedValue(['newos-light', 'newos-dark'])
     ;(fs.readFileSync as jest.Mock).mockResolvedValue(
       JSON.stringify(mockThemeData)
     )
@@ -113,7 +113,7 @@ describe('useLoadTheme', () => {
       await result.current
     })
 
-    expect(mockSetSelectedThemeId).toHaveBeenCalledWith('joi-light')
+    expect(mockSetSelectedThemeId).toHaveBeenCalledWith('newos-light')
   })
 
   it('should handle missing janDataFolderPath', async () => {
