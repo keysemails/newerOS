@@ -13,7 +13,7 @@ export default function LogoMark(props: Props) {
       width={width}
       height={height}
       className={className}
-      src="icons/app_icon.svg"
+      src="icons/app_icon.png"
       alt="newOS - Logo"
     />
   )
