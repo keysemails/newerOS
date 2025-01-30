@@ -172,6 +172,14 @@ class WindowManager {
   }
 
   /**
+   * Return the URL of the main window.
+   * @returns string
+   */
+  getURL(): string {
+    return this.mainWindow?.webContents.getURL() ?? ''
+  }
+
+  /**
    *  Send main view state to the main app.
    */
   sendMainViewState(route: string) {

@@ -1,5 +1,7 @@
 // @ts-nocheck
+import { log } from '@janhq/core/node'
 import { app, Menu, shell, dialog } from 'electron'
+import { join, resolve } from 'path'
 import { autoUpdater } from 'electron-updater'
 import { log } from '@janhq/core/node'
 const isMac = process.platform === 'darwin'
@@ -11,9 +13,20 @@ const template: (Electron.MenuItemConstructorOptions | Electron.MenuItem)[] = [
     submenu: [
       {
         label: `Switch to Private mode`,
+        click: () => {
+          const rendererPath = join(__dirname, '..', 'renderer')
+          const mainPath = join('file://', join(rendererPath, 'index.html'))
+          const mainUrl = 'http://localhost:3000'
+          const modePath = app.isPackaged ? mainPath : mainUrl
+          windowManager.mainWindow?.getURL().includes('newcoin') ? windowManager.mainWindow?.loadURL(modePath) : windowManager.showMainWindow()
+          windowManager.sendMainViewState('Thread')
+        },
       },
       {
         label: `Switch to Online mode`,
+        click: () => {
+          windowManager.mainWindow?.loadURL('https://os.newcoin.org')
+        },
       },
       {
         label: `About ${app.name}`,

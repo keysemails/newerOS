@@ -112,21 +112,17 @@ const BaseLayout = () => {
       (_event: string, route: string) => {
         if (route === 'Settings') {
           setMainViewState(MainViewState.Settings)
+        } 
+        if (route === 'Thread') {
+          setMainViewState(MainViewState.Thread)
         }
+        if (route === 'GetStarted') {
+          setMainViewState(MainViewState.GetStarted)
+        }
+        console.log('route', route)
       }
     )
   }, [setMainViewState])
-
-  const handleProductAnalytics = (isAllowed: boolean) => {
-    setProductAnalytic(isAllowed)
-    setProductAnalyticPrompt(false)
-    setShowProductAnalyticPrompt(false)
-    if (isAllowed) {
-      posthog.opt_in_capturing()
-    } else {
-      posthog.opt_out_capturing()
-    }
-  }
 
   if (
     mainViewState === MainViewState.GetStarted ||
