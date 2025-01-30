@@ -151,7 +151,7 @@ const showToast: (title: string, message: string) => void = (title, message) =>
  * @returns {Promise<any>} - A promise that resolves when the URL has been successfully loaded.
  */
 const loadUrl: (url: string) => Promise<any> = (url) =>
-  globalThis.core.api?.loadURL(url)
+  globalThis.core.api?.loadUrl(url)
 
 
 /**

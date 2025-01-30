@@ -1,5 +1,5 @@
 import BaseLayout from '@/containers/Layout'
-import LayoutChildren from '@/containers/LayoutChildren'
+import LandingViewContainer from '@/containers/LandingViewContainer'
 
 import Providers from '@/containers/Providers'
 
@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <Providers>
       <BaseLayout>
-        <LayoutChildren />
+        <LandingViewContainer />
       </BaseLayout>
     </Providers>
   )

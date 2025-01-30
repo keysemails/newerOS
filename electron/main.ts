@@ -36,10 +36,10 @@ import { registerGlobalShortcuts } from './utils/shortcut'
 const preloadPath = join(__dirname, 'preload.js')
 const rendererPath = join(__dirname, '..', 'renderer')
 
-const mainPath = join('file://', join(rendererPath, 'index.html'))
+const mainPath = join('file://', join(rendererPath, 'landing.html'))
 const quickAskPath = join(rendererPath, 'search.html')
 
-const mainUrl = 'http://localhost:3000'
+const mainUrl = 'http://localhost:3000/landing'
 const quickAskUrl = `${mainUrl}/search`
 
 const gotTheLock = app.requestSingleInstanceLock()

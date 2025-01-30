@@ -316,6 +316,6 @@ export function handleAppIPCs() {
     // Load the URL in the main window
     ipcMain.handle(
       NativeRoute.loadUrl, 
-      async (_event, url: string): Promise<any> => windowManager.mainWindow?.loadURL(url)
+      async (_event, url: string) => windowManager.mainWindow?.loadURL(url)
     )
 }

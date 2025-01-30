@@ -3,6 +3,9 @@ export enum MainViewState {
   Settings,
   Thread,
   LocalServer,
+}
+
+export enum LandingViewState {
   GetStarted,
   ModeChoice,
 }

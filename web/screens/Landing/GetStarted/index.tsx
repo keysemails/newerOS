@@ -8,23 +8,18 @@ import LogoMark from '@/containers/Brand/Logo/Mark'
 
 import Video from '@/containers/Video'
 
-import { MainViewState } from '@/constants/screens'
+import { LandingViewState } from '@/constants/screens'
 
-import { mainViewStateAtom } from '@/helpers/atoms/App.atom'
+import { landingViewStateAtom } from '@/helpers/atoms/Landing.atom'
 
 const EntryScreen = () => {
-  const [mainViewState, setMainViewState] = useAtom(mainViewStateAtom)
+  const [mainViewState, setMainViewState] = useAtom(landingViewStateAtom)
 
-  const onButtonClick = (state: MainViewState) => {
+  const onButtonClick = (state: LandingViewState) => {
     if (mainViewState === state) return
     setMainViewState(state)
   }
-
-  useEffect(() => {
-    if (sessionStorage.getItem('firstLaunch'))
-      setMainViewState(MainViewState.Thread)
-  }, [mainViewState])
-
+  
   return (
     <main className="relative min-h-screen bg-white">
       <div className="flex items-center justify-center px-6 py-10">
@@ -45,7 +40,7 @@ const EntryScreen = () => {
           <button
             className="bg-newcoin-blue rounded-full bg-white px-11 py-2 text-base font-medium dark:text-black"
             style={{ boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)' }}
-            onClick={() => onButtonClick(MainViewState.ModeChoice)}
+            onClick={() => onButtonClick(LandingViewState.ModeChoice)}
           >
             Get Started
           </button>
