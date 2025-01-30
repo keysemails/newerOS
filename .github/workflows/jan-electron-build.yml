@@ -30,6 +30,7 @@ jobs:
           prerelease: false
 
   build-macos:
+    needs: create-draft-release
     uses: ./.github/workflows/template-build-macos.yml
     secrets: inherit
     permissions:
@@ -37,9 +38,10 @@ jobs:
     with:
       ref: ${{ github.ref }}
       public_provider: github
-      new_version: v0.2.0
+      new_version: v${{ needs.create-draft-release.outputs.version }}
 
   build-windows-x64:
+    needs: create-draft-release
     uses: ./.github/workflows/template-build-windows-x64.yml
     secrets: inherit
     permissions:
@@ -47,9 +49,10 @@ jobs:
     with:
       ref: ${{ github.ref }}
       public_provider: github
-      new_version: v0.2.0
+      new_version: v${{ needs.create-draft-release.outputs.version }}
 
   build-linux-x64:
+    needs: create-draft-release
     uses: ./.github/workflows/template-build-linux-x64.yml
     secrets: inherit
     permissions:
@@ -57,7 +60,7 @@ jobs:
     with:
       ref: ${{ github.ref }}
       public_provider: github
-      new_version: v0.2.0
+      new_version: v${{ needs.create-draft-release.outputs.version }}
 
   update_release_draft:
     needs: [build-macos, build-windows-x64, build-linux-x64]
